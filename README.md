@@ -2,31 +2,75 @@
 
 `doctoral-thesis-pipeline` is a Codex skill for stage-gated doctoral proposal and thesis drafting.
 
-It is designed for PhD, DBA, and EdD work that needs:
+It helps turn incomplete thesis ideas into coherent academic deliverables while preserving truthfulness, traceability, and alignment across the research backbone.
+
+## Best Fit
+
+This skill is designed for PhD, DBA, and EdD work that needs:
 
 - topic refinement
-- theory-method alignment
-- traceable literature retrieval
-- proposal chapter drafting
+- proposal drafting
+- literature review structuring
 - methodology planning
 - revision support
 - gate-based quality checks
 
-The skill emphasizes truthfulness, traceability, and structural alignment across title, research questions, framework, variables, method, evidence, and chapter outputs.
+It is especially useful when a user has a promising topic but the title, research questions, variables, framework, and method are still not aligned.
 
-## What This Skill Does
+## Core Principles
 
-This skill helps Codex turn rough thesis inputs into structured academic deliverables such as:
+- Do not fabricate citations, findings, coefficients, or sample statistics
+- Prefer narrowing scope over forcing weak completeness
+- Align title, gap, framework, variables, and method before expanding prose
+- Build a traceable literature base before writing from memory on current or niche topics
+- Produce files, not just advice, when thesis work product is needed
 
+## Workflow
+
+The skill treats thesis support as an execution problem, not just a writing problem:
+
+1. Classify the thesis stage
+2. Normalize the research backbone
+3. Build the minimum literature base
+4. Draft the stage-specific deliverable
+5. Run hard and soft gate checks before calling the result usable
+
+## Supported Thesis Stages
+
+- Topic selection
+- Proposal
+- Literature review
+- Methodology
+- Data collection
+- Data analysis
+- Full draft
+- Revision
+- Final submission
+- Viva preparation
+
+## Typical Deliverables
+
+Depending on the user request, the skill can help produce:
+
+- refined title options
+- research gap statements
 - proposal chapters 1-3
-- literature reviews
-- methodology sections
+- hypotheses or propositions
+- methodology plans
 - revision matrices
-- thesis progress workflows
+- literature retrieval files
 
-It is especially useful when a thesis topic is current, niche, or logically underdeveloped and the user needs a tighter academic backbone before expanding the draft.
+It is designed to work well with practical output files such as:
 
-## Repository Structure
+- `project_config.yaml`
+- `research_plan.md`
+- `references/query_plan.md`
+- `references/candidate_papers.jsonl`
+- `references/evidence_table.csv`
+- `outputs/proposal_draft.md`
+- `outputs/revision_matrix.md`
+
+## Repository Layout
 
 ```text
 SKILL.md
@@ -40,25 +84,32 @@ scripts/
   semantic_scholar_search.py
 ```
 
-## Key Features
+## Included References
 
-- Stage classification from topic selection to viva preparation
-- Proposal-mode workflow for drafting Chapters 1-3
-- Minimal literature-base construction before writing from memory
-- Hard and soft gates to catch misalignment and unsupported claims
-- Support for practical work products such as:
-  - `project_config.yaml`
-  - `research_plan.md`
-  - `references/query_plan.md`
-  - `references/candidate_papers.jsonl`
-  - `references/evidence_table.csv`
-  - `outputs/proposal_draft.md`
+- `references/proposal-workflow.md`
+  Proposal-stage structure, logic chain, chapter expectations, and common failure modes
+- `references/literature-retrieval.md`
+  Search strategy, evidence extraction rules, and retrieval outputs
+- `references/gates.md`
+  Hard and soft completion gates
+
+## Included Script
+
+`scripts/semantic_scholar_search.py` helps create a seed literature pool when `SEMANTIC_SCHOLAR_API_KEY` is available.
+
+Example:
+
+```bash
+python scripts/semantic_scholar_search.py --query "AI tourism marketing" --limit 20 --out candidate_papers.jsonl
+```
+
+You can provide the API key through the process environment or `.env.local`.
 
 ## Related Skills
 
 This skill is designed to work especially well with:
 
-- `figures-diagram` for conceptual frameworks, methodology diagrams, timelines, and other non-numeric academic figures
+- `figures-diagram` for conceptual frameworks, methodology diagrams, taxonomy diagrams, flowcharts, and other non-numeric academic figures
 
 ## Installation
 
@@ -68,38 +119,25 @@ Copy this folder into your Codex skills directory:
 $CODEX_HOME/skills/doctoral-thesis-pipeline
 ```
 
-On Windows, that is typically:
+On Windows, this is typically:
 
 ```text
 C:\Users\<your-user>\.codex\skills\doctoral-thesis-pipeline
 ```
 
-## Usage
-
-Call the skill from Codex with prompts such as:
+## Example Usage
 
 - `Use $doctoral-thesis-pipeline to turn my rough topic into proposal chapters 1-3.`
 - `Use $doctoral-thesis-pipeline to strengthen the logic of my methodology section.`
 - `Use $doctoral-thesis-pipeline to create a literature review workflow and evidence table.`
+- `Use $doctoral-thesis-pipeline to revise my proposal after supervisor feedback.`
 
-## Semantic Scholar Script
+## Who This Repository Is For
 
-The included script can help create a seed literature pool when `SEMANTIC_SCHOLAR_API_KEY` is available:
+- Codex users who want a reusable thesis skill
+- academic writing workflow builders
+- researchers who want a structured proposal pipeline instead of ad hoc prompting
 
-```bash
-python scripts/semantic_scholar_search.py --query "AI tourism marketing" --limit 20 --out candidate_papers.jsonl
-```
+## License
 
-You can place the API key in the process environment or in `.env.local`.
-
-## Design Principles
-
-- Do not fabricate citations, findings, or sample statistics
-- Prefer narrowing scope over forcing completeness
-- Keep the research backbone aligned before expanding prose
-- Produce files, not just advice, when the task calls for thesis work product
-
-## Notes
-
-- This repository contains the skill itself, not a full thesis project
-- No software license has been added yet
+MIT
