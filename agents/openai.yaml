@@ -1,0 +1,4 @@
+interface:
+  display_name: "Thesis Pipeline"
+  short_description: "Stage-gated workflow for PhD proposals and thesis drafting."
+  default_prompt: "Use $doctoral-thesis-pipeline to plan or draft a proposal, literature review, methodology, or thesis chapter."
