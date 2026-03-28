@@ -1,0 +1,39 @@
+<svg width="1600" height="560" viewBox="0 0 1600 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="40" x2="1450" y2="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="0.55" stop-color="#163B72"/>
+      <stop offset="1" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="260" y1="110" x2="1280" y2="460" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.07"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="560" rx="36" fill="url(#bg)"/>
+  <circle cx="1360" cy="86" r="160" fill="#F8FAFC" fill-opacity="0.08"/>
+  <circle cx="1514" cy="406" r="230" fill="#FED7AA" fill-opacity="0.10"/>
+  <rect x="70" y="68" width="1460" height="424" rx="28" fill="url(#panel)" stroke="#FFFFFF" stroke-opacity="0.16"/>
+  <text x="112" y="140" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="22" letter-spacing="4">CODEX SKILL</text>
+  <text x="112" y="230" fill="#FFFFFF" font-family="Georgia, 'Times New Roman', serif" font-size="66" font-weight="700">Doctoral Thesis Pipeline</text>
+  <text x="112" y="286" fill="#DBEAFE" font-family="Segoe UI, Arial, sans-serif" font-size="27">Stage-gated workflow for proposal drafting, literature retrieval, methodology planning, and revision support.</text>
+  <g>
+    <rect x="112" y="334" width="214" height="44" rx="22" fill="#F8FAFC" fill-opacity="0.12"/>
+    <text x="146" y="363" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20">Proposal Workflow</text>
+    <rect x="338" y="334" width="222" height="44" rx="22" fill="#F8FAFC" fill-opacity="0.12"/>
+    <text x="374" y="363" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20">Literature Base</text>
+    <rect x="572" y="334" width="240" height="44" rx="22" fill="#F8FAFC" fill-opacity="0.12"/>
+    <text x="607" y="363" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="20">Gate Checks</text>
+  </g>
+  <g>
+    <rect x="1008" y="124" width="394" height="276" rx="24" fill="#FFFFFF" fill-opacity="0.14" stroke="#FFFFFF" stroke-opacity="0.14"/>
+    <rect x="1042" y="164" width="324" height="42" rx="14" fill="#0F172A" fill-opacity="0.34"/>
+    <text x="1070" y="191" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18">Research backbone locked</text>
+    <rect x="1042" y="226" width="324" height="42" rx="14" fill="#FFFFFF" fill-opacity="0.16"/>
+    <text x="1070" y="253" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18">Minimum literature base built</text>
+    <rect x="1042" y="288" width="324" height="42" rx="14" fill="#FFFFFF" fill-opacity="0.16"/>
+    <text x="1070" y="315" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="18">Proposal chapters 1-3 drafted</text>
+    <rect x="1042" y="350" width="324" height="42" rx="14" fill="#FED7AA" fill-opacity="0.26"/>
+    <text x="1070" y="377" fill="#FFF7ED" font-family="Segoe UI, Arial, sans-serif" font-size="18">Hard and soft gates passed</text>
+  </g>
+</svg>
