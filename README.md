@@ -1,3 +1,5 @@
+
+
 <p align="center">
   <img src="./assets/banner.svg" alt="Doctoral Thesis Pipeline banner" width="100%">
 </p>
@@ -73,6 +75,7 @@ Common companion files include:
 - `project_config.yaml`
 - `research_plan.md`
 - `references/query_plan.md`
+- `references/retrieval_log.jsonl`
 - `references/candidate_papers.jsonl`
 - `references/evidence_table.csv`
 - `outputs/proposal_draft.md`
